@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0526DBF81F0AAE8800705D4C"
-               BuildableName = "projecteuler_swift"
-               BlueprintName = "projecteuler_swift"
+               BlueprintIdentifier = "0526DC1F1F0AB7DF00705D4C"
+               BuildableName = "problem2"
+               BlueprintName = "problem2"
                ReferencedContainer = "container:projecteuler_swift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0526DBF81F0AAE8800705D4C"
-            BuildableName = "projecteuler_swift"
-            BlueprintName = "projecteuler_swift"
+            BlueprintIdentifier = "0526DC1F1F0AB7DF00705D4C"
+            BuildableName = "problem2"
+            BlueprintName = "problem2"
             ReferencedContainer = "container:projecteuler_swift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0526DBF81F0AAE8800705D4C"
-            BuildableName = "projecteuler_swift"
-            BlueprintName = "projecteuler_swift"
+            BlueprintIdentifier = "0526DC1F1F0AB7DF00705D4C"
+            BuildableName = "problem2"
+            BlueprintName = "problem2"
             ReferencedContainer = "container:projecteuler_swift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0526DBF81F0AAE8800705D4C"
-            BuildableName = "projecteuler_swift"
-            BlueprintName = "projecteuler_swift"
+            BlueprintIdentifier = "0526DC1F1F0AB7DF00705D4C"
+            BuildableName = "problem2"
+            BlueprintName = "problem2"
             ReferencedContainer = "container:projecteuler_swift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

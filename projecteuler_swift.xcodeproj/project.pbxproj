@@ -9,10 +9,21 @@
 /* Begin PBXBuildFile section */
 		0526DC0A1F0AAE9F00705D4C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC091F0AAE9F00705D4C /* main.swift */; };
 		0526DC1B1F0AB2A400705D4C /* euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC1A1F0AB2A400705D4C /* euler.swift */; };
+		0526DC231F0AB7DF00705D4C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC221F0AB7DF00705D4C /* main.swift */; };
+		0526DC271F0AB7E500705D4C /* euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC1A1F0AB2A400705D4C /* euler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0526DC051F0AAE9F00705D4C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		0526DC1E1F0AB7DF00705D4C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -27,10 +38,19 @@
 		0526DC071F0AAE9F00705D4C /* problem1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = problem1; sourceTree = BUILT_PRODUCTS_DIR; };
 		0526DC091F0AAE9F00705D4C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0526DC1A1F0AB2A400705D4C /* euler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = euler.swift; sourceTree = "<group>"; };
+		0526DC201F0AB7DF00705D4C /* problem2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = problem2; sourceTree = BUILT_PRODUCTS_DIR; };
+		0526DC221F0AB7DF00705D4C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0526DC041F0AAE9F00705D4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0526DC1D1F0AB7DF00705D4C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,8 +63,9 @@
 		0526DBF01F0AAE8800705D4C = {
 			isa = PBXGroup;
 			children = (
-				0526DC081F0AAE9F00705D4C /* problem1 */,
 				0526DC141F0AB28D00705D4C /* euler */,
+				0526DC081F0AAE9F00705D4C /* problem1 */,
+				0526DC211F0AB7DF00705D4C /* problem2 */,
 				0526DBFA1F0AAE8800705D4C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				0526DC071F0AAE9F00705D4C /* problem1 */,
+				0526DC201F0AB7DF00705D4C /* problem2 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +93,14 @@
 				0526DC1A1F0AB2A400705D4C /* euler.swift */,
 			);
 			path = euler;
+			sourceTree = "<group>";
+		};
+		0526DC211F0AB7DF00705D4C /* problem2 */ = {
+			isa = PBXGroup;
+			children = (
+				0526DC221F0AB7DF00705D4C /* main.swift */,
+			);
+			path = problem2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +123,23 @@
 			productReference = 0526DC071F0AAE9F00705D4C /* problem1 */;
 			productType = "com.apple.product-type.tool";
 		};
+		0526DC1F1F0AB7DF00705D4C /* problem2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0526DC261F0AB7DF00705D4C /* Build configuration list for PBXNativeTarget "problem2" */;
+			buildPhases = (
+				0526DC1C1F0AB7DF00705D4C /* Sources */,
+				0526DC1D1F0AB7DF00705D4C /* Frameworks */,
+				0526DC1E1F0AB7DF00705D4C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = problem2;
+			productName = problem2;
+			productReference = 0526DC201F0AB7DF00705D4C /* problem2 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -104,6 +151,11 @@
 				ORGANIZATIONNAME = RiffRaff;
 				TargetAttributes = {
 					0526DC061F0AAE9F00705D4C = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8U757LX64V;
+						ProvisioningStyle = Automatic;
+					};
+					0526DC1F1F0AB7DF00705D4C = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 8U757LX64V;
 						ProvisioningStyle = Automatic;
@@ -123,6 +175,7 @@
 			projectRoot = "";
 			targets = (
 				0526DC061F0AAE9F00705D4C /* problem1 */,
+				0526DC1F1F0AB7DF00705D4C /* problem2 */,
 			);
 		};
 /* End PBXProject section */
@@ -134,6 +187,15 @@
 			files = (
 				0526DC1B1F0AB2A400705D4C /* euler.swift in Sources */,
 				0526DC0A1F0AAE9F00705D4C /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0526DC1C1F0AB7DF00705D4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0526DC231F0AB7DF00705D4C /* main.swift in Sources */,
+				0526DC271F0AB7E500705D4C /* euler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +310,24 @@
 			};
 			name = Release;
 		};
+		0526DC241F0AB7DF00705D4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 8U757LX64V;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0526DC251F0AB7DF00705D4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 8U757LX64V;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -265,6 +345,15 @@
 			buildConfigurations = (
 				0526DC0C1F0AAE9F00705D4C /* Debug */,
 				0526DC0D1F0AAE9F00705D4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0526DC261F0AB7DF00705D4C /* Build configuration list for PBXNativeTarget "problem2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0526DC241F0AB7DF00705D4C /* Debug */,
+				0526DC251F0AB7DF00705D4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
