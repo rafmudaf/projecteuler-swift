@@ -18,4 +18,4 @@ for i in 1..<1000 {
     }
 }
 
-print(sum)
+print("The sum of all the multiple of 3 or 5 below 1000 is \(sum)")
