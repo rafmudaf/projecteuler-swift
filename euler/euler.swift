@@ -52,13 +52,13 @@ class euler {
     
     class func isa(palindrome n: Int) -> Bool {
         let palString = String(n)
-        let palLength = palString.characters.count
+        let palLength = palString.count
         let halfLength = palLength/2
         
         var index = palString.index(palString.startIndex, offsetBy: halfLength)
-        let front = palString.substring(to: index)
+        let front = String(palString[..<index])
         index = palString.index(palString.endIndex, offsetBy: -1*halfLength)
-        let back = palString.substring(from: index)
+        let back = String(palString[..<index])
         
         for i in 0..<halfLength {
             if front[i] != back[halfLength-1-i] {
@@ -71,16 +71,12 @@ class euler {
 
 extension String {
     
-    var length: Int {
-        return self.characters.count
-    }
-    
     subscript (i: Int) -> String {
         return self[Range(i ..< i + 1)]
     }
     
     func substring(from: Int) -> String {
-        return self[Range(min(from, length) ..< length)]
+        return self[Range(min(from, count) ..< count)]
     }
     
     func substring(to: Int) -> String {
@@ -88,10 +84,10 @@ extension String {
     }
     
     subscript (r: Range<Int>) -> String {
-        let range = Range(uncheckedBounds: (lower: max(0, min(length, r.lowerBound)),
-                                            upper: min(length, max(0, r.upperBound))))
+        let range = Range(uncheckedBounds: (lower: max(0, min(count, r.lowerBound)),
+                                            upper: min(count, max(0, r.upperBound))))
         let start = index(startIndex, offsetBy: range.lowerBound)
         let end = index(start, offsetBy: range.upperBound - range.lowerBound)
-        return self[Range(start ..< end)]
+        return String(self[Range(start ..< end)])
     }
 }
