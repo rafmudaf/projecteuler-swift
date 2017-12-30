@@ -11,6 +11,7 @@
 		050599AB1FF6DD110093853C /* euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC1A1F0AB2A400705D4C /* euler.swift */; };
 		050599B31FF6F6EC0093853C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050599B21FF6F6EC0093853C /* main.swift */; };
 		050599B71FF6F7140093853C /* euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC1A1F0AB2A400705D4C /* euler.swift */; };
+		050599B91FF7259C0093853C /* shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 050599B81FF7259C0093853C /* shaders.metal */; };
 		0526DC0A1F0AAE9F00705D4C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC091F0AAE9F00705D4C /* main.swift */; };
 		0526DC1B1F0AB2A400705D4C /* euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC1A1F0AB2A400705D4C /* euler.swift */; };
 		0526DC231F0AB7DF00705D4C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC221F0AB7DF00705D4C /* main.swift */; };
@@ -83,6 +84,7 @@
 		050599A61FF6DB3B0093853C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		050599B01FF6F6EC0093853C /* problem6 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = problem6; sourceTree = BUILT_PRODUCTS_DIR; };
 		050599B21FF6F6EC0093853C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		050599B81FF7259C0093853C /* shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shaders.metal; sourceTree = "<group>"; };
 		0526DC071F0AAE9F00705D4C /* problem1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = problem1; sourceTree = BUILT_PRODUCTS_DIR; };
 		0526DC091F0AAE9F00705D4C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0526DC1A1F0AB2A400705D4C /* euler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = euler.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				050599B21FF6F6EC0093853C /* main.swift */,
+				050599B81FF7259C0093853C /* shaders.metal */,
 			);
 			path = problem6;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 			files = (
 				050599B31FF6F6EC0093853C /* main.swift in Sources */,
 				050599B71FF6F7140093853C /* euler.swift in Sources */,
+				050599B91FF7259C0093853C /* shaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
