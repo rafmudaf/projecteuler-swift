@@ -22,7 +22,7 @@ import Foundation
 import MetalKit
     
 // problem configuration
-var nmax: UInt32 = 10
+var nmax: UInt32 = 100
 var sumsquares: UInt32 = 0
 var sum: UInt32 = 0
 var inputarray: [UInt32] = []
@@ -54,7 +54,7 @@ commandEncoder.setBuffer(outVectorBuffer, offset: 0, index: 1)
 // configure the compute pipeline
 commandEncoder.setComputePipelineState(pipelineState)
 let threadGroupCount = MTLSizeMake(10, 1, 1)
-let threadGroups = MTLSizeMake(1, 1, 1)
+let threadGroups = MTLSizeMake(10, 1, 1)
 
 // commit the commands
 commandQueue = device.makeCommandQueue()!
