@@ -31,41 +31,15 @@ for i in 1...nmax {
 }
 var resultarray = [UInt32](repeating: UInt32(0.0), count: inputarray.count)
 
-// initialize Metal
-let device: MTLDevice! = MTLCreateSystemDefaultDevice()
-var defaultLibrary = device.makeDefaultLibrary()
-let kernelFunction = defaultLibrary?.makeFunction(name: "squareValueShader")
-var pipelineState = try device.makeComputePipelineState(function: kernelFunction!)
+let metalInstance = try MetalInstance(kernelName: "squareValueShader")
 
-var commandQueue = device.makeCommandQueue()!
-let commandBuffer = commandQueue.makeCommandBuffer()!
-let commandEncoder = commandBuffer.makeComputeCommandEncoder()!
-
-let valueByteLength = inputarray.count*MemoryLayout.size(ofValue: inputarray[0])
-
-// add the input array to the metal buffer
-var inVectorBuffer = device.makeBuffer(bytes: &inputarray, length: valueByteLength, options: .storageModeShared)
-commandEncoder.setBuffer(inVectorBuffer, offset: 0, index: 0)
-
-// add the output array to the metal buffer
-var outVectorBuffer = device.makeBuffer(bytes: &resultarray, length: valueByteLength, options: .storageModeShared)
-commandEncoder.setBuffer(outVectorBuffer, offset: 0, index: 1)
-
-// configure the compute pipeline
-commandEncoder.setComputePipelineState(pipelineState)
-let threadGroupCount = MTLSizeMake(10, 1, 1)
-let threadGroups = MTLSizeMake(10, 1, 1)
-
-// commit the commands
-commandQueue = device.makeCommandQueue()!
-commandEncoder.dispatchThreadgroups(threadGroups, threadsPerThreadgroup: threadGroupCount)
-commandEncoder.endEncoding()
-commandBuffer.commit()
-commandBuffer.waitUntilCompleted()
+metalInstance.bindToBuffer(inputArray: inputarray, outputArray: resultarray)
+metalInstance.configurePipeline(threadGroupCountWidth: 10, threadGroupCountHeight: 1, threadGroupCountDepth: 1, threadGroupsWidth: 10, threadGroupsHeight: 1, threadGroupsDepth: 1)
+metalInstance.execute()
 
 // put the result data into a Swift array
-var data = NSData(bytesNoCopy: outVectorBuffer!.contents(), length: inputarray.count * MemoryLayout.size(ofValue: inputarray[0]), freeWhenDone: false)
-data.getBytes(&resultarray, length:inputarray.count * MemoryLayout.size(ofValue: inputarray[0]))
+var data = NSData(bytesNoCopy: metalInstance.outputVectorBuffer!.contents(), length: inputarray.count * MemoryLayout.size(ofValue: inputarray[0]), freeWhenDone: false)
+data.getBytes(&resultarray, length: inputarray.count * MemoryLayout.size(ofValue: inputarray[0]))
 
 // compute the sum
 sum = inputarray.reduce(0, { x, y in

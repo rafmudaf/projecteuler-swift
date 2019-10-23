@@ -1,3 +1,4 @@
 .DS_Store
 xcuserdata
 /projecteuler_swift.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+.vscode

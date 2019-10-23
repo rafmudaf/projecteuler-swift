@@ -20,6 +20,8 @@
 		0526DC331F0ABD6F00705D4C /* euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC1A1F0AB2A400705D4C /* euler.swift */; };
 		056D78911F0D889D0071BBCD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D78901F0D889D0071BBCD /* main.swift */; };
 		056D78951F0D88AE0071BBCD /* euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC1A1F0AB2A400705D4C /* euler.swift */; };
+		409CF6A5235D7F2900AF58E7 /* MetalInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409CF6A4235D7F2900AF58E7 /* MetalInstance.swift */; };
+		409CF6A6235D7F2900AF58E7 /* MetalInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409CF6A4235D7F2900AF58E7 /* MetalInstance.swift */; };
 		40FFB9F0207829CC0094BE49 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FFB9EF207829CC0094BE49 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +106,7 @@
 		0526DC2E1F0ABBE600705D4C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		056D788E1F0D889D0071BBCD /* problem4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = problem4; sourceTree = BUILT_PRODUCTS_DIR; };
 		056D78901F0D889D0071BBCD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		409CF6A4235D7F2900AF58E7 /* MetalInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalInstance.swift; sourceTree = "<group>"; };
 		40FFB9ED207829CC0094BE49 /* problem7 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = problem7; sourceTree = BUILT_PRODUCTS_DIR; };
 		40FFB9EF207829CC0094BE49 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -219,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				0526DC1A1F0AB2A400705D4C /* euler.swift */,
+				409CF6A4235D7F2900AF58E7 /* MetalInstance.swift */,
 			);
 			path = euler;
 			sourceTree = "<group>";
@@ -462,6 +466,7 @@
 			files = (
 				050599B31FF6F6EC0093853C /* main.swift in Sources */,
 				050599B71FF6F7140093853C /* euler.swift in Sources */,
+				409CF6A6235D7F2900AF58E7 /* MetalInstance.swift in Sources */,
 				050599B91FF7259C0093853C /* shaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409CF6A5235D7F2900AF58E7 /* MetalInstance.swift in Sources */,
 				0526DC1B1F0AB2A400705D4C /* euler.swift in Sources */,
 				0526DC0A1F0AAE9F00705D4C /* main.swift in Sources */,
 			);
