@@ -8,7 +8,7 @@
 
 import Foundation
 
-class euler {
+class Euler {
     class func dividesEvenly(_ a: Int, into b: Int) -> Bool {
         return b % a == 0
     }
