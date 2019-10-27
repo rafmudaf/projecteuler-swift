@@ -8,20 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		050599A71FF6DB3B0093853C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050599A61FF6DB3B0093853C /* main.swift */; };
-		050599AB1FF6DD110093853C /* euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC1A1F0AB2A400705D4C /* euler.swift */; };
 		050599B31FF6F6EC0093853C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050599B21FF6F6EC0093853C /* main.swift */; };
-		050599B71FF6F7140093853C /* euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC1A1F0AB2A400705D4C /* euler.swift */; };
 		050599B91FF7259C0093853C /* shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 050599B81FF7259C0093853C /* shaders.metal */; };
 		0526DC0A1F0AAE9F00705D4C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC091F0AAE9F00705D4C /* main.swift */; };
 		0526DC1B1F0AB2A400705D4C /* euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC1A1F0AB2A400705D4C /* euler.swift */; };
 		0526DC231F0AB7DF00705D4C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC221F0AB7DF00705D4C /* main.swift */; };
-		0526DC271F0AB7E500705D4C /* euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC1A1F0AB2A400705D4C /* euler.swift */; };
 		0526DC2F1F0ABBE600705D4C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC2E1F0ABBE600705D4C /* main.swift */; };
-		0526DC331F0ABD6F00705D4C /* euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC1A1F0AB2A400705D4C /* euler.swift */; };
 		056D78911F0D889D0071BBCD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D78901F0D889D0071BBCD /* main.swift */; };
-		056D78951F0D88AE0071BBCD /* euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526DC1A1F0AB2A400705D4C /* euler.swift */; };
-		409CF6A5235D7F2900AF58E7 /* MetalInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409CF6A4235D7F2900AF58E7 /* MetalInstance.swift */; };
-		409CF6A6235D7F2900AF58E7 /* MetalInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409CF6A4235D7F2900AF58E7 /* MetalInstance.swift */; };
+		403639262366327500233C30 /* MetalInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409CF6A4235D7F2900AF58E7 /* MetalInstance.swift */; };
+		40ED0F562360117400051F5E /* shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 40ED0F552360117400051F5E /* shaders.metal */; };
+		40ED0F57236011A500051F5E /* MetalInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409CF6A4235D7F2900AF58E7 /* MetalInstance.swift */; };
 		40FFB9F0207829CC0094BE49 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FFB9EF207829CC0094BE49 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +103,10 @@
 		056D788E1F0D889D0071BBCD /* problem4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = problem4; sourceTree = BUILT_PRODUCTS_DIR; };
 		056D78901F0D889D0071BBCD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		409CF6A4235D7F2900AF58E7 /* MetalInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalInstance.swift; sourceTree = "<group>"; };
+		40A9A0982360AEFC00CB651E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		40ED0F552360117400051F5E /* shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shaders.metal; sourceTree = "<group>"; };
+		40ED0F5A2360AD5200051F5E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		40ED0F5B2360AE6900051F5E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		40FFB9ED207829CC0094BE49 /* problem7 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = problem7; sourceTree = BUILT_PRODUCTS_DIR; };
 		40FFB9EF207829CC0094BE49 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +184,7 @@
 		0526DBF01F0AAE8800705D4C = {
 			isa = PBXGroup;
 			children = (
+				40ED0F5B2360AE6900051F5E /* README.md */,
 				0526DC141F0AB28D00705D4C /* euler */,
 				0526DC081F0AAE9F00705D4C /* problem1 */,
 				0526DC211F0AB7DF00705D4C /* problem2 */,
@@ -214,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				0526DC091F0AAE9F00705D4C /* main.swift */,
+				40ED0F552360117400051F5E /* shaders.metal */,
+				40ED0F5A2360AD5200051F5E /* README.md */,
 			);
 			path = problem1;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			children = (
 				0526DC1A1F0AB2A400705D4C /* euler.swift */,
 				409CF6A4235D7F2900AF58E7 /* MetalInstance.swift */,
+				40A9A0982360AEFC00CB651E /* README.md */,
 			);
 			path = euler;
 			sourceTree = "<group>";
@@ -387,7 +391,7 @@
 		0526DBF11F0AAE8800705D4C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = RiffRaff;
 				TargetAttributes = {
@@ -456,7 +460,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				050599A71FF6DB3B0093853C /* main.swift in Sources */,
-				050599AB1FF6DD110093853C /* euler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,9 +467,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403639262366327500233C30 /* MetalInstance.swift in Sources */,
 				050599B31FF6F6EC0093853C /* main.swift in Sources */,
-				050599B71FF6F7140093853C /* euler.swift in Sources */,
-				409CF6A6235D7F2900AF58E7 /* MetalInstance.swift in Sources */,
 				050599B91FF7259C0093853C /* shaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,9 +477,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				409CF6A5235D7F2900AF58E7 /* MetalInstance.swift in Sources */,
 				0526DC1B1F0AB2A400705D4C /* euler.swift in Sources */,
 				0526DC0A1F0AAE9F00705D4C /* main.swift in Sources */,
+				40ED0F57236011A500051F5E /* MetalInstance.swift in Sources */,
+				40ED0F562360117400051F5E /* shaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +489,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0526DC231F0AB7DF00705D4C /* main.swift in Sources */,
-				0526DC271F0AB7E500705D4C /* euler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,7 +497,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0526DC2F1F0ABBE600705D4C /* main.swift in Sources */,
-				0526DC331F0ABD6F00705D4C /* euler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,7 +505,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				056D78911F0D889D0071BBCD /* main.swift in Sources */,
-				056D78951F0D88AE0071BBCD /* euler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,6 +699,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				DEVELOPMENT_TEAM = 8U757LX64V;
+				ENABLE_TESTABILITY = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
