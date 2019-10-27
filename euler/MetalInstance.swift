@@ -6,7 +6,6 @@
 //  Copyright © 2019 RiffRaff. All rights reserved.
 //
 
-import Foundation
 import MetalKit
 
 enum MetalInstanceError: Error {
@@ -25,9 +24,12 @@ class MetalInstance {
     var pipelineState: MTLComputePipelineState
     var commandBuffer: MTLCommandBuffer
     var commandEncoder: MTLComputeCommandEncoder
+    var inputArray: [UInt32]
+    var outputArray: [UInt32]
     var outputVectorBuffer: MTLBuffer?
 
-    init(kernelName: String) throws {
+    init(kernelName: String, inputArray: [UInt32], outputArray: [UInt32]) throws {
+        // Configure the Metal GPU device
         guard let device = MTLCreateSystemDefaultDevice() else {
             throw MetalInstanceError.deviceError
         }
@@ -59,16 +61,24 @@ class MetalInstance {
             throw MetalInstanceError.commandEncoderError
         }
         self.commandEncoder = commandEncoder
-    }
-
-    func bindToBuffer(inputArray: [UInt32], outputArray: [UInt32]) {
-        // add the input array to the metal buffer
-        let valueByteLength = inputArray.count * MemoryLayout.size(ofValue: inputArray[0])
-        let inVectorBuffer = self.device.makeBuffer(bytes: inputArray, length: valueByteLength, options: .storageModeShared)
-        self.commandEncoder.setBuffer(inVectorBuffer, offset: 0, index: 0)
-
-        // add the output array to the metal buffer
-        self.outputVectorBuffer = self.device.makeBuffer(bytes: outputArray, length: valueByteLength, options: .storageModeShared)
+        
+        // Add the input array to the Metal buffer
+        self.inputArray = inputArray
+        let valueByteLength = self.inputArray.count * MemoryLayout.size(ofValue: self.inputArray[0])
+        let inputVectorBuffer = self.device.makeBuffer(
+            bytes: inputArray,
+            length: valueByteLength,
+            options: .storageModeShared
+        )
+        self.commandEncoder.setBuffer(inputVectorBuffer, offset: 0, index: 0)
+        
+        // Add the output array to the Metal buffer
+        self.outputArray = outputArray
+        self.outputVectorBuffer = self.device.makeBuffer(
+            bytes: outputArray,
+            length: valueByteLength,
+            options: .storageModeShared
+        )
         self.commandEncoder.setBuffer(self.outputVectorBuffer, offset: 0, index: 1)
     }
         
@@ -80,11 +90,21 @@ class MetalInstance {
                            threadGroupsDepth: Int) {
         // configure the compute pipeline
         self.commandEncoder.setComputePipelineState(self.pipelineState)
-        let threadGroupCount = MTLSizeMake(threadGroupCountWidth, threadGroupCountHeight, threadGroupCountDepth)
-        let threadGroups = MTLSizeMake(threadGroupsWidth, threadGroupsHeight, threadGroupsDepth)
+        let threadGroupCount = MTLSizeMake(
+            threadGroupCountWidth,
+            threadGroupCountHeight,
+            threadGroupCountDepth
+        )
+        let threadGroups = MTLSizeMake(
+            threadGroupsWidth,
+            threadGroupsHeight,
+            threadGroupsDepth
+        )
 
         // commit the commands
-        self.commandEncoder.dispatchThreadgroups(threadGroups, threadsPerThreadgroup: threadGroupCount)
+        self.commandEncoder.dispatchThreadgroups(
+            threadGroups,
+            threadsPerThreadgroup: threadGroupCount)
         self.commandEncoder.endEncoding()
     }
 
@@ -93,12 +113,16 @@ class MetalInstance {
         self.commandBuffer.waitUntilCompleted()
     }
 
-//    func dataAsArray() -> NSData? {
-//        
-//        guard let outputVectorBuffer = self.outputVectorBuffer else {
-//            return nil
-//        }
-//        
-//        return NSData(bytesNoCopy: outputVectorBuffer.contents(), length: inputarray.count * MemoryLayout.size(ofValue: inputarray[0]), freeWhenDone: false)
-//    }
+    func dataAsArray() -> NSData? {
+        
+        guard let outputVectorBuffer = self.outputVectorBuffer else {
+            return nil
+        }
+
+        return NSData(
+            bytesNoCopy: outputVectorBuffer.contents(),
+            length: self.inputArray.count * MemoryLayout.size(ofValue: self.inputArray[0]),
+            freeWhenDone: false
+        )
+    }
 }
